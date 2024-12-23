@@ -1,12 +1,14 @@
-<p align="center"> <img alt="Space Station 14" width="880" height="300" src="https://raw.githubusercontent.com/space-wizards/asset-dump/de329a7898bb716b9d5ba9a0cd07f38e61f1ed05/github-logo.svg" /></p>
+<p align="center"> <img alt="Emberfall" width="250" src="https://raw.githubusercontent.com/emberfall-14/emberfall/11ee144488a3f6a1550acf1f487746b8cb51af6e/Resources/Textures/Logo/logo.png" /></p>
 
-Space Station 14 is a remake of SS13 that runs on [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), our homegrown engine written in C#.
-
-This is the primary repo for Space Station 14. To prevent people forking RobustToolbox, a "content" pack is loaded by the client and server. This content pack contains everything needed to play the game on one specific server.
-
-If you want to host or create content for SS14, this is the repo you need. It contains both RobustToolbox and the content pack for development of new content packs.
+Emberfall is a lore-rich fork that reimagines the [Space Station 14](https://github.com/space-wizards/space-station-14/) experience, bringing players to the Aelys system—a battleground of corporate ambition and survival. As part of the crew of a Solus Concord orbital station, you'll tackle challenges ranging from station upkeep to Aeonite extraction.
 
 ## Links
+
+**Emberfall**
+
+[Discord](https://discord.gg/bKZ5sWyKhH)
+
+**Space Station 14**
 
 [Website](https://spacestation14.io/) | [Discord](https://discord.ss14.io/) | [Forum](https://forum.spacestation14.io/) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Standalone Download](https://spacestation14.io/about/nightlies/)
 
@@ -16,10 +18,8 @@ Our [docs site](https://docs.spacestation14.io/) has documentation on SS14s cont
 
 ## Contributing
 
-We are happy to accept contributions from anybody. Get in Discord if you want to help. We've got a [list of issues](https://github.com/space-wizards/space-station-14-content/issues) that need to be done and anybody can pick them up. Don't be afraid to ask for help either!  
+We are happy to accept contributions from anybody. Get in Discord if you want to help. We've got a [roadmap](https://github.com/orgs/emberfall-14/projects/1/views/1) with features that need to be implemented. Don't be afraid to ask for help either!
 Just make sure your changes and pull requests are in accordance with the [contribution guidelines](https://docs.spacestation14.com/en/general-development/codebase-info/pull-request-guidelines.html).
-
-We are not currently accepting translations of the game on our main repository. If you would like to translate the game into another language consider creating a fork or contributing to a fork.
 
 ## Building
 
