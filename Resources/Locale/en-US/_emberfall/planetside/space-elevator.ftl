@@ -10,4 +10,4 @@ space-elevator-controls-label = Controls
 space-elevator-ftl = Transfer
 
 # Error States
-docking-console-no-shuttle = No Elevator Connected
+space-elevator-no-shuttle = No Elevator Connected

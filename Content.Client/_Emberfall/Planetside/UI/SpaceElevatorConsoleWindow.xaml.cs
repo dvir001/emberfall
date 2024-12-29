@@ -49,7 +49,7 @@ public sealed partial class SpaceElevatorConsoleWindow : FancyWindow
 
         if (!comp.HasPlatform)
         {
-            MapFTLState.Text = Loc.GetString("docking-console-no-shuttle");
+            MapFTLState.Text = Loc.GetString("space-elevator-no-shuttle");
             _ftlStyle.BackgroundColor = Color.FromHex("#B02E26");
         }
 
