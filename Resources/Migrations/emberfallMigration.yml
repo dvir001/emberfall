@@ -1,0 +1,7 @@
+# Emberfall specific migrations
+
+# 12-30-2024
+WeaponRifleLecter: WeaponRifleLecterEmberfall
+WeaponRifleM90GrenadeLauncher: WeaponRifleM90
+WeaponSubMachineGunVector: WeaponSubMachineGunVectorEmberfall
+GunSafeLecter: GunSafeLightRifleLecter
