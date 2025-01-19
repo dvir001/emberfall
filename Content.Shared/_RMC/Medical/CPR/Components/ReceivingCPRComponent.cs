@@ -1,7 +1,7 @@
-﻿using Content.Shared._Emberfall.Medical.CPR.Systems;
+﻿using Content.Shared._RMC.Medical.CPR.Systems;
 using Robust.Shared.GameStates;
 
-namespace Content.Shared._Emberfall.Medical.CPR.Components;
+namespace Content.Shared._RMC.Medical.CPR.Components;
 
 [RegisterComponent, NetworkedComponent]
 [Access(typeof(SharedCPRSystem))]

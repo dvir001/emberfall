@@ -1,7 +1,15 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+//
+// This Source Code Form is "Incompatible With Secondary
+// Licenses", as defined by the Mozilla Public License, v. 2.0.
+
 using Content.Shared.Audio;
 using Content.Shared.CartridgeLoader;
 using Content.Shared._Emberfall.CartridgeLoader.Cartridges;
 using Content.Shared._Emberfall.NanoChat;
+using Robust.Shared.Audio;
 
 namespace Content.Server.CartridgeLoader.Cartridges;
 
@@ -65,7 +73,8 @@ public sealed partial class LogProbeCartridgeSystem
         _audioSystem.PlayEntity(ent.Comp.SoundScan,
             args.InteractEvent.User,
             target,
-            AudioHelpers.WithVariation(0.25f, _random));
+            AudioParams.Default.WithVariation(0.25f)
+            );
         _popupSystem.PopupCursor(Loc.GetString("log-probe-scan-nanochat", ("card", target)), args.InteractEvent.User);
 
         ent.Comp.PulledAccessLogs.Clear();

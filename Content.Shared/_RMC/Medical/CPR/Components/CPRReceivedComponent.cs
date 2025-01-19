@@ -1,8 +1,8 @@
-﻿using Content.Shared._Emberfall.Medical.CPR.Systems;
+﻿using Content.Shared._RMC.Medical.CPR.Systems;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
-namespace Content.Shared._Emberfall.Medical.CPR.Components;
+namespace Content.Shared._RMC.Medical.CPR.Components;
 
 // ReSharper disable InconsistentNaming
 [RegisterComponent, NetworkedComponent, Access(typeof(SharedCPRSystem))]

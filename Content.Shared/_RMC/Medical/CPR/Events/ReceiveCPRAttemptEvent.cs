@@ -1,6 +1,6 @@
 ﻿using Content.Shared.Inventory;
 
-namespace Content.Shared._Emberfall.Medical.CPR.Events;
+namespace Content.Shared._RMC.Medical.CPR.Events;
 
 // ReSharper disable InconsistentNaming
 [ByRefEvent]

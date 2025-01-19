@@ -1,11 +1,7 @@
-using Content.Shared.Database;
 using Content.Shared.Examine;
-using Content.Shared.Popups;
-using Content.Shared.Verbs;
-using Robust.Shared.Player;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._Emberfall.Engraving;
+namespace Content.Shared._CD.Engraving;
 
 public abstract class SharedEngravableSystem : EntitySystem
 {

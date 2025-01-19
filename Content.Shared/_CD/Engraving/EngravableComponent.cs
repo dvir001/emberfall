@@ -1,6 +1,6 @@
 using Robust.Shared.GameStates;
 
-namespace Content.Shared._Emberfall.Engraving;
+namespace Content.Shared._CD.Engraving;
 
 /// <summary>
 ///     Allows an items' description to be modified with an engraving

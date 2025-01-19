@@ -1,5 +1,5 @@
-using Content.Shared._Emberfall.Medical.CPR.Components;
-using Content.Shared._Emberfall.Medical.CPR.Events;
+using Content.Shared._RMC.Medical.CPR.Components;
+using Content.Shared._RMC.Medical.CPR.Events;
 using Content.Shared.Atmos.Rotting;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
@@ -16,7 +16,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-namespace Content.Shared._Emberfall.Medical.CPR.Systems;
+namespace Content.Shared._RMC.Medical.CPR.Systems;
 
 // ReSharper disable InconsistentNaming
 public abstract class SharedCPRSystem : EntitySystem

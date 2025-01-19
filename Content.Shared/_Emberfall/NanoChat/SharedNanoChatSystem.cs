@@ -1,5 +1,13 @@
+// This Source Code Form is subject to the terms of the Mozilla Public
+// License, v. 2.0. If a copy of the MPL was not distributed with this
+// file, You can obtain one at https://mozilla.org/MPL/2.0/.
+//
+// This Source Code Form is "Incompatible With Secondary
+// Licenses", as defined by the Mozilla Public License, v. 2.0.
+
 using Content.Shared._Emberfall.CartridgeLoader.Cartridges;
 using Content.Shared.Examine;
+using JetBrains.Annotations;
 using Robust.Shared.Timing;
 
 namespace Content.Shared._Emberfall.NanoChat;
@@ -31,11 +39,12 @@ public abstract class SharedNanoChatSystem : EntitySystem
         args.PushMarkup(Loc.GetString("nanochat-card-examine-number", ("number", $"{ent.Comp.Number:D4}")));
     }
 
-    #region Public API Methods
+    #region Public API
 
     /// <summary>
     ///     Gets the NanoChat number for a card.
     /// </summary>
+    [PublicAPI]
     public uint? GetNumber(Entity<NanoChatCardComponent?> card)
     {
         if (!Resolve(card, ref card.Comp))
@@ -47,6 +56,7 @@ public abstract class SharedNanoChatSystem : EntitySystem
     /// <summary>
     ///     Sets the NanoChat number for a card.
     /// </summary>
+    [PublicAPI]
     public void SetNumber(Entity<NanoChatCardComponent?> card, uint number)
     {
         if (!Resolve(card, ref card.Comp))
@@ -62,6 +72,7 @@ public abstract class SharedNanoChatSystem : EntitySystem
     /// <summary>
     ///     Sets Closed for a card.
     /// </summary>
+    [PublicAPI]
     public void SetClosed(Entity<NanoChatCardComponent?> card, bool closed)
     {
         if (!Resolve(card, ref card.Comp))
@@ -71,11 +82,13 @@ public abstract class SharedNanoChatSystem : EntitySystem
             return;
 
         card.Comp.Closed = closed;
+        Dirty(card);
     }
 
     /// <summary>
     ///     Gets the recipients dictionary from a card.
     /// </summary>
+    [PublicAPI]
     public IReadOnlyDictionary<uint, NanoChatRecipient> GetRecipients(Entity<NanoChatCardComponent?> card)
     {
         if (!Resolve(card, ref card.Comp))
@@ -87,6 +100,7 @@ public abstract class SharedNanoChatSystem : EntitySystem
     /// <summary>
     ///     Gets the messages dictionary from a card.
     /// </summary>
+    [PublicAPI]
     public IReadOnlyDictionary<uint, List<NanoChatMessage>> GetMessages(Entity<NanoChatCardComponent?> card)
     {
         if (!Resolve(card, ref card.Comp))
@@ -98,6 +112,7 @@ public abstract class SharedNanoChatSystem : EntitySystem
     /// <summary>
     ///     Sets a specific recipient in the card.
     /// </summary>
+    [PublicAPI]
     public void SetRecipient(Entity<NanoChatCardComponent?> card, uint number, NanoChatRecipient recipient)
     {
         if (!Resolve(card, ref card.Comp))
@@ -110,6 +125,7 @@ public abstract class SharedNanoChatSystem : EntitySystem
     /// <summary>
     ///     Gets a specific recipient from the card.
     /// </summary>
+    [PublicAPI]
     public NanoChatRecipient? GetRecipient(Entity<NanoChatCardComponent?> card, uint number)
     {
         if (!Resolve(card, ref card.Comp) || !card.Comp.Recipients.TryGetValue(number, out var recipient))
@@ -121,6 +137,7 @@ public abstract class SharedNanoChatSystem : EntitySystem
     /// <summary>
     ///     Gets all messages for a specific recipient.
     /// </summary>
+    [PublicAPI]
     public List<NanoChatMessage>? GetMessagesForRecipient(Entity<NanoChatCardComponent?> card, uint recipientNumber)
     {
         if (!Resolve(card, ref card.Comp) || !card.Comp.Messages.TryGetValue(recipientNumber, out var messages))
@@ -132,6 +149,7 @@ public abstract class SharedNanoChatSystem : EntitySystem
     /// <summary>
     ///     Adds a message to a recipient's conversation.
     /// </summary>
+    [PublicAPI]
     public void AddMessage(Entity<NanoChatCardComponent?> card, uint recipientNumber, NanoChatMessage message)
     {
         if (!Resolve(card, ref card.Comp))
@@ -151,6 +169,7 @@ public abstract class SharedNanoChatSystem : EntitySystem
     /// <summary>
     ///     Gets the currently selected chat recipient.
     /// </summary>
+    [PublicAPI]
     public uint? GetCurrentChat(Entity<NanoChatCardComponent?> card)
     {
         if (!Resolve(card, ref card.Comp))
@@ -162,6 +181,7 @@ public abstract class SharedNanoChatSystem : EntitySystem
     /// <summary>
     ///     Sets the currently selected chat recipient.
     /// </summary>
+    [PublicAPI]
     public void SetCurrentChat(Entity<NanoChatCardComponent?> card, uint? recipient)
     {
         if (!Resolve(card, ref card.Comp))
@@ -174,6 +194,7 @@ public abstract class SharedNanoChatSystem : EntitySystem
     /// <summary>
     ///     Gets whether notifications are muted.
     /// </summary>
+    [PublicAPI]
     public bool GetNotificationsMuted(Entity<NanoChatCardComponent?> card)
     {
         if (!Resolve(card, ref card.Comp))
@@ -185,6 +206,7 @@ public abstract class SharedNanoChatSystem : EntitySystem
     /// <summary>
     ///     Sets whether notifications are muted.
     /// </summary>
+    [PublicAPI]
     public void SetNotificationsMuted(Entity<NanoChatCardComponent?> card, bool muted)
     {
         if (!Resolve(card, ref card.Comp))
@@ -200,6 +222,7 @@ public abstract class SharedNanoChatSystem : EntitySystem
     /// <summary>
     ///     Gets the time of the last message.
     /// </summary>
+    [PublicAPI]
     public TimeSpan? GetLastMessageTime(Entity<NanoChatCardComponent?> card)
     {
         if (!Resolve(card, ref card.Comp))
@@ -211,6 +234,7 @@ public abstract class SharedNanoChatSystem : EntitySystem
     /// <summary>
     ///     Gets if there are unread messages from a recipient.
     /// </summary>
+    [PublicAPI]
     public bool HasUnreadMessages(Entity<NanoChatCardComponent?> card, uint recipientNumber)
     {
         if (!Resolve(card, ref card.Comp) || !card.Comp.Recipients.TryGetValue(recipientNumber, out var recipient))
@@ -222,6 +246,7 @@ public abstract class SharedNanoChatSystem : EntitySystem
     /// <summary>
     ///     Clears all messages and recipients from the card.
     /// </summary>
+    [PublicAPI]
     public void Clear(Entity<NanoChatCardComponent?> card)
     {
         if (!Resolve(card, ref card.Comp))
@@ -238,6 +263,7 @@ public abstract class SharedNanoChatSystem : EntitySystem
     ///     Optionally keeps message history while removing from active chats.
     /// </summary>
     /// <returns>True if the chat was deleted successfully</returns>
+    [PublicAPI]
     public bool TryDeleteChat(Entity<NanoChatCardComponent?> card, uint recipientNumber, bool keepMessages = false)
     {
         if (!Resolve(card, ref card.Comp))
@@ -265,6 +291,7 @@ public abstract class SharedNanoChatSystem : EntitySystem
     ///     If the recipient doesn't exist, they will be added with the provided info.
     /// </summary>
     /// <returns>True if the recipient was added or already existed</returns>
+    [PublicAPI]
     public bool EnsureRecipientExists(Entity<NanoChatCardComponent?> card,
         uint recipientNumber,
         NanoChatRecipient? recipientInfo = null)
