@@ -39,7 +39,7 @@
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]
             #engineering - 8-12
-            AtmosphericTechnician: [ 4, 4 ]
+#            AtmosphericTechnician: [ 4, 4 ]
             StationEngineer: [ 4, 4 ]
             TechnicalAssistant: [ 4, 4 ]
             #medical - 9-13
