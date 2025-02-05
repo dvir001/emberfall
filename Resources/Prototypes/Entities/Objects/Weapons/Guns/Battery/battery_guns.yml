@@ -434,11 +434,12 @@
     price: 100
   - type: Gun
     fireRate: 2
+    projectileSpeed: 35 # any higher and this causes issues in lag
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
-  - type: HitscanBatteryAmmoProvider # Emberfall
-    proto: DisablerPractice # Emberfall
-    fireCost: 100
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletDisablerPractice
+    fireCost: 50
   - type: Tag
     tags:
     - Taser
@@ -464,9 +465,9 @@
     slots:
       - suitStorage
       - Belt
-  - type: HitscanBatteryAmmoProvider # Emberfall
-    proto: Disabler # Emberfall
-    fireCost: 100
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletDisabler
+    fireCost: 50
   - type: GuideHelp
     guides:
     - Security
@@ -493,7 +494,7 @@
         shader: unshaded
   - type: Gun
     selectedMode: FullAuto
-    fireRate: 4
+    fireRate: 4.5
     availableModes:
       - SemiAuto
       - FullAuto
@@ -501,7 +502,7 @@
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
   - type: ProjectileBatteryAmmoProvider
     proto: BulletDisablerSmg
-    fireCost: 33
+    fireCost: 25
   - type: MagazineVisuals
     magState: mag
     steps: 5
