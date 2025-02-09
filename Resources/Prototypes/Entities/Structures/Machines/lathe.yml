@@ -133,6 +133,7 @@
   - type: EmagLatheRecipes
     emagStaticPacks:
     - SecurityAmmoStatic
+    - SecurityAmmoStaticEmberfall # Emberfall
     - SecurityWeaponsStatic
   - type: BlueprintReceiver
     whitelist:
@@ -210,6 +211,7 @@
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityAmmo
+    - SecurityAmmoEmberfall # Emberfall
     - SecurityExplosives
     - SecurityEquipment
     - SecurityWeapons
@@ -391,13 +393,16 @@
     staticPacks:
     - SecurityEquipmentStatic
     - SecurityPracticeStatic
+    - SecurityPracticeStaticEmberfall # Emberfall
     - SecurityAmmoStatic
+    - SecurityAmmoStaticEmberfall # Emberfall
     - SecurityWeaponsStatic
     dynamicPacks:
     - SecurityEquipment
     - SecurityBoards
     - SecurityExplosives
     - SecurityAmmo
+    - SecurityAmmoEmberfall # Emberfall
     - SecurityWeapons
   - type: MaterialStorage
     whitelist:
@@ -432,6 +437,7 @@
       runningState: icon
       staticPacks:
       - SecurityAmmoStatic
+      - SecurityAmmoStaticEmberfall # Emberfall
     - type: MaterialStorage
       whitelist:
         tags:

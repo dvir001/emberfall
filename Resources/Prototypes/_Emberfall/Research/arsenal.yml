@@ -8,10 +8,13 @@
   tier: 1
   cost: 7500
   recipeUnlocks:
-  - MagazinePistolTracer
-  - MagazineLightRifleTracer
-  - MagazinePistolSubMachineGunTracer
-  - MagazineRifleTracer
+  - MagazineBoxHeavyPistolTracer
   - MagazineBoxLightRifleTracer
   - MagazineBoxPistolTracer
   - MagazineBoxRifleTracer
+  - MagazineHeavyPistolSubMachineGunTracer
+  - MagazineHeavyPistolTracer
+  - MagazineLightRifleTracer
+  - MagazinePistolSubMachineGunTracer
+  - MagazinePistolTracer
+  - MagazineRifleTracer
