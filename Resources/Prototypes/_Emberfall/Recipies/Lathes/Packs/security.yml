@@ -1,0 +1,46 @@
+## Static
+
+# Practice ammo and magazines
+- type: latheRecipePack
+  id: SecurityPracticeStaticEmberfall
+  recipes:
+  - MagazineBoxHeavyPistolPractice
+  - MagazineHeavyPistolPractice
+  - MagazineHeavyPistolSubMachineGunPractice
+  - MagazineLightRiflePractice
+  - MagazinePistolPractice
+  - MagazineRiflePractice
+  - SpeedLoaderMagnumPractice
+
+# Shared between emagged autolathe and secfab
+- type: latheRecipePack
+  id: SecurityAmmoStaticEmberfall
+  recipes:
+  - MagazineBoxHeavyPistol
+  - MagazineHeavyPistol
+  - MagazineHeavyPistolEmpty
+  - MagazineHeavyPistolSubMachineGun
+  - MagazineHeavyPistolSubMachineGunEmpty
+
+## Dynamic
+
+# Shared between emagged protolathe and secfab
+- type: latheRecipePack
+  id: SecurityAmmoEmberfall
+  recipes:
+  - MagazineBoxHeavyPistolIncendiary
+  - MagazineBoxHeavyPistolTracer
+  - MagazineBoxHeavyPistolUranium
+  - MagazineBoxLightRifleTracer
+  - MagazineBoxPistolTracer
+  - MagazineBoxRifleTracer
+  - MagazineHeavyPistolIncendiary
+  - MagazineHeavyPistolSubMachineGunIncendiary
+  - MagazineHeavyPistolSubMachineGunTracer
+  - MagazineHeavyPistolSubMachineGunUranium
+  - MagazineHeavyPistolTracer
+  - MagazineHeavyPistolUranium
+  - MagazineLightRifleTracer
+  - MagazinePistolSubMachineGunTracer
+  - MagazinePistolTracer
+  - MagazineRifleTracer
