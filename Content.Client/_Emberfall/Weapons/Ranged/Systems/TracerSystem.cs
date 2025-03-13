@@ -1,9 +1,6 @@
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
-//
-// This Source Code Form is "Incompatible With Secondary
-// Licenses", as defined by the Mozilla Public License, v. 2.0.
 
 using System.Numerics;
 using Content.Client._Emberfall.Weapons.Ranged.Overlays;
@@ -85,6 +82,12 @@ public sealed class TracerSystem : EntitySystem
                 continue;
 
             var positions = tracer.Data.PositionHistory;
+
+            if (positions.Count < 2)
+                continue;
+
+            handle.SetTransform(Matrix3x2.Identity);
+
             for (var i = 1; i < positions.Count; i++)
             {
                 handle.DrawLine(positions[i - 1], positions[i], tracer.Color);
